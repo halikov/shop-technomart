@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Микаил Халиков](https://up.htmlacademy.ru/htmlcss/23/user/91943).
-* Наставник: `[Булат Садиков](https://htmlacademy.ru/profile/id16331)`.
+* Наставник: [Булат Садиков](https://htmlacademy.ru/profile/id16331).
 
 ---
 
