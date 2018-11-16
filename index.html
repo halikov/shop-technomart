@@ -5,8 +5,116 @@
     <title>HTML Academy: Техномарт</title>
   </head>
   <body>
+    <header class="page-header">
+      <div class="page-header_top-line">
+        <a class="logo">Техномарт</a>
+        <input class="search" type="search" placeholder="Поиск">
+        <a class="bookmarks" href="#">Закладки</a>
+        <a class="basket" href="shopping-cart.html">Корзина</a>
+        <a class="checkout" href="checkout.html">Оформить заказ</a>
+      </div>
+      <div class="page-header_center">
+        <h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
+        <p>
+          <a class="telephone" href="#">+7(812) 555-05-55</a>
+          <span class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
+        </p>
+        <ul class="account-menu">
+          <li><a class="log-in" href="#">Войти</a></li>
+          <li><a class="sign-in" href="#">Регистрация</a></li>
+        </ul>
+      </div>
+      <nav class="page-header_navigation">
+        <ul class="main-menu">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="about-us.html">Компания</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="news.html">Новости</a></li>
+          <li><a href="special-offers.html">Спецпредложения</a></li>
+          <li><a href="delivery.html">Доставка</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="container">
+      <section class="about-us">
+        <h2 class="about-us_title">КОМПАНИЯ «Техномарт»</h2>
+        <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
+        <p>Мы можем доставить ваш товар в самые отдаленные точки России!
+        Техномарт работает со многими транспортными компаниями:</p>
+        <ul class="logistics-list">
+          <li>Деловые линии</li>
+          <li>Автотрейдинг</li>
+          <li>ЖелДорЭкспедиция</li>
+        </ul>
+        <a class="button" href="about-us.html">Подробнее о компании</a>
+      </section>
+      <section class="contacts">
+        <h3 class="contact-us">Контакты</h3>
+        <p>Вы можете забрать товар сами,<br> заехав в наш офис:</p>
+        <div class="map-service mini-map"><a class="map-service_link" href="map.html">Б. Конюшенная 19/8</a></div>
+        <a class="button" href="feedback.html">Заблудились? Напишите нам!</a>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <div class="footer-header">
+        <a class="footer-logo">Техномарт</a>
+        <nav class="footer-navigation">
+          <ul class="footer-menu">
+            <li><a href="about-us.html">Компания</a></li>
+            <li><a href="news.html">Новости</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="delivery.html">Доставка</a></li>
+            <li><a href="cantacts.html">Контакты</a></li>
+          </ul>
+        </nav>
+        <p class="address">
+          г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
+          +7 (812) 555-05-55
+        </p>
+        <ul class="product-menu_list">
+          <li><a href="">Материалы</a></li>
+          <li><a href="">Техника</a></li>
+          <li><a href="">Инструмент</a></li>
+          <li><a href="">Спецпредложения</a></li>
+        </ul>
+      </div>
+      <div class="footer-buttom">
+        <p class="copyright"></p>
+        <ul class="social_list">
+          <li><a href="#">Вконтакте</a></li>
+          <li><a href="#">Фейсбук</a></li>
+          <li><a href="#">Инстаграм</a></li>
+        </ul>
+        <p class="feedback_mail">
+          <b>Обратная связь:</b>
+          <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+        </p>
+        <p class="produced-by">
+          <b>Разработано -</b>
+          <a href="https://htmlacademy.ru">htmlacademy.ru</a>
+        </p>
+      </div>
+    </footer>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
-
+    <!-- модальные окна карты и отправки письма -->
+    <div class="map-service normal-mapa">
+      <!-- тут будет модальное окно сервиса карт  -->
+      <span class="modal-close">x</span>
+    </div>
+    
+    <div class="feedback-form">
+      <form class="write-us" action="">
+        <label for="user-name">Ваше имя:</label>
+        <input id="user-name" type="text" name="user-name" value="Имя Фамилия">
+        <label for="user-email">Ваш e-mail:</label>
+        <input type="email" id="user-email" value="email@example.com">
+        <label for="comments">Текст письма:</label>
+        <textarea id="comments" name="" cols="30" rows="10">В свободной форме</textarea>
+        <input type="submit" value="Отправить">
+        
+      </form>
+      <span class="modal-close">x</span>
+    </div>
   </body>
 </html>
