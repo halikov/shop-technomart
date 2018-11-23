@@ -7,14 +7,14 @@
   <body>
     <header class="page-header">
       <div class="page-header_top-line">
-        <a class="logo"><img class="logo-img" src="img/logo.png" width="111" height="18" alt="Техномарт">Техномарт</a>
-        <form class="search-form" name="search-form">
-          <input class="search" type="search" placeholder="Поиск">
-          <input type="button" value="Найти">
+        <a class="logo" aria-label="Техномарт"><img class="logo-img" src="img/logo.png" width="111" height="18" alt="Логотип Техномарт">Техномарт</a>
+        <form class="search-form" name="search-form" method="post" action="">
+          <input class="search" type="search" aria-label="Поиск по сайту" placeholder="Поиск">
+          <button class="button button-search" type="submit">Искать</button>
         </form>
-        <a class="bookmarks" href="bookmarks.html">Закладки</a>
-        <a class="basket" href="shopping-cart.html">Корзина</a>
-        <a class="checkout" href="checkout.html">Оформить заказ</a>
+        <a class="bookmarks" href="bookmarks.html" arial-label="Закладки">Закладки</a>
+        <a class="basket" href="shopping-cart.html" aria-label="Корзина">Корзина</a>
+        <a class="checkout" href="checkout.html" aria-label="Оформить заказ">Оформить заказ</a>
       </div>
       <div class="page-header_center">
         <h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
@@ -29,7 +29,7 @@
       </div>
       <nav class="page-header_navigation">
         <ul class="main-menu">
-          <li><a >Главная</a></li>
+          <li aria-current="page"><a >Главная</a></li>
           <li><a href="about-us.html">Компания</a></li>
           <li><a href="catalog.html">Каталог</a></li>
           <li><a href="news.html">Новости</a></li>
@@ -49,27 +49,27 @@
           -->
           <li class="promo_list-item">
             <h3>Материалы</h3>
-            <a href="#">На любой вкус</a>
+            <a href="#" class="button-promo">На любой вкус</a>
             <span class="new">New</span>
           </li>
           <li class="promo_list-item">
             <h3>Инструмент</h3>
-            <a href="#">На все случаи</a>
+            <a href="#" class="button-promo">На все случаи</a>
             <span class="new visually-hidden">New</span>
           </li>
           <li class="promo_list-item">
             <h3>Техника</h3>
-            <a href="#">Для стройки</a>
+            <a href="#" class="button-promo">Для стройки</a>
             <span class="new visually-hidden">New</span>
           </li>
           <li class="promo_list-item">
             <h3>Скидки 50%</h3>
-            <a href="#">На 350 товаров</a>
+            <a href="#" class="button-promo">На 350 товаров</a>
             <span class="new visually-hidden">New</span>
           </li>
           <li class="promo_list-item">
             <h3>Доставка</h3>
-            <a href="#">Бесплатно</a>
+            <a href="#" class="button-promo">Бесплатно</a>
             <span class="new visually-hidden">New</span>
           </li>
         </ul>
@@ -89,11 +89,13 @@
             </li>
           </ul>
           <form class="slide-buttons">
-            <input id="pre" type="radio">
-            <input id="next" type="radio">
-            <label for="pre">Пред.</label>
-            <label for="next">След.</label>
+            <input id="pre" type="radio" name="btn-slide">
+            <input id="next" type="radio" name="btn-slide">
+            <label class="visually-hidden" for="pre">Пред.</label>
+            <label class="visually-hidden" for="next">След.</label>
           </form>
+          <button class="button button-slider-prev" type="button">Пред.</button>
+          <button class="button button-slider-next" type="button">След.</button>
         </div>
       </section>
       <section class="popular-products">
@@ -101,38 +103,38 @@
         <a class="all-popular-products" href="popular.html">Все популярные товары</a>
         <ul class="popular-products_list">
           <li>
-            <a class="popular-podtuct_item" href="catalog-item.html">
+            <a class="popular-podtuct_item" href="catalog-item.html" aria-label="Перфоратор BOSCH BFG 9000">
               <img src="img/bosch-bfg-9000.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 9000">
               <p>Перфоратор BOSCH BFG 9000</p>
               <span><del>32 500Р</del></span>
-              <span class="button_price">25 500P</span>
+              <button class="button_price">25 500P</button>
             <!-- из ТЗ не понятно цена отедльная кнопка или ссылка, или весь блок является ссылкой на карточку товара   -->
             </a>
           </li>
           <li>
-            <a class="popular-podtuct_item" href="catalog-item.html">
+            <a class="popular-podtuct_item" href="catalog-item.html" aria-label="Перфоратор BOSCH BFG 3000">
               <img src="img/bosch-bfg-3000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
               <p>Перфоратор BOSCH BFG 3000</p>
               <span><del>22 500Р</del></span>
-              <span class="button_price">15 500P</span>
+              <button class="button_price">15 500P</button>
             <!-- из ТЗ не понятно цена отедльная кнопка или ссылка, или весь блок является ссылкой на карточку товара   -->
             </a>
           </li>
           <li>
-            <a class="popular-podtuct_item" href="catalog-item.html">
+            <a class="popular-podtuct_item" href="catalog-item.html" aria-label="Перфоратор BOSCH BFG 6000">
               <img src="img/bosch-bfg-6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
               <p>Перфоратор BOSCH BFG 6000</p>
               <span><del>30 500Р</del></span>
-              <span class="button_price">25 500P</span>
+              <button class="button_price">25 500P</button>
             <!-- из ТЗ не понятно цена отедльная кнопка или ссылка, или весь блок является ссылкой на карточку товара   -->
             </a>
           </li>
           <li>
-            <a class="popular-podtuct_item" href="catalog-item.html">
+            <a class="popular-podtuct_item" href="catalog-item.html" aria-label="Перфоратор BOSCH BFG 2000">
               <img src="img/bosch-bfg-2000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
               <p>Перфоратор BOSCH BFG 2000</p>
               <span class="visually-hidden"><del>12 500Р</del></span>
-              <span class="button_price">12 500P</span>
+              <button class="button_price">12 500P</button>
             <!-- из ТЗ не понятно цена отедльная кнопка или ссылка, или весь блок является ссылкой на карточку товара   -->
             </a>
           </li>
@@ -143,28 +145,28 @@
         <a class="popular-brands-link" href="catalog.html">Все производители</a>
         <ul class="popular-brands_list">
           <li>
-            <a href="#"><img src="img/bosch.jpg" width="126" height="37" alt="BOSCH"></a>
+            <a href="#" aria-label="BOSCH"><img src="img/bosch.jpg" width="126" height="37" alt="BOSCH">BOSCH</a>
           </li>
           <li>
-            <a href="#"><img src="img/makita.jpg" width="123" height="40" alt="makita"></a>
+            <a href="#" aria-label="makita"><img src="img/makita.jpg" width="123" height="40" alt="makita">Makita</a>
           </li>
           <li>
-            <a href="#"><img src="img/de-walt.jpg" width="146" height="44" alt="DeWALT"></a>
+            <a href="#" aria-label="DeWalt"><img src="img/de-walt.jpg" width="146" height="44" alt="DeWALT">DeWalt</a>
           </li>
           <li>
-            <a href="#"><img src="img/interscol.jpg" width="200" height="88" alt="interscol"></a>
+            <a href="#" aria-label="интерскол"><img src="img/interscol.jpg" width="200" height="88" alt="interscol">Интерскол</a>
           </li>
           <li>
-            <a href="#"><img src="img/hitachi.jpg" width="169" height="31" alt="HITACHI"></a>
+            <a href="#" aria-label="hitachi"><img src="img/hitachi.jpg" width="169" height="31" alt="HITACHI">Hitachi</a>
           </li>
           <li>
-            <a href="#"><img src="img/lg.jpg" width="121" height="73" alt="LG"></a>
+            <a href="#" aria-label="LG"><img src="img/lg.jpg" width="121" height="73" alt="LG">LG</a>
           </li>
           <li>
-            <a href="#"><img src="img/aeg.jpg" width="151" height="96" alt="AEG"></a>
+            <a href="#" aria-label="AEG"><img src="img/aeg.jpg" width="151" height="96" alt="AEG">AEG</a>
           </li>
           <li>
-            <a href="#"><img src="img/metabo.jpg" width="204" height="69" alt="metabo"></a>
+            <a href="#" aria-label="metabo"><img src="img/metabo.jpg" width="204" height="69" alt="metabo">Metabo</a>
           </li>
         </ul>
       </section>
@@ -172,17 +174,14 @@
         <h2>Сервисы</h2>
         <p>Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
         <div class="slider">
-          <ul class="slider-button_list">
-            <li>
-              <p id="slide-delivery" class="slide-1">Доставка</p>
-            </li>
-            <li>
-              <p id="slide-assurance" class="slide-2">Гарантия</p>
-            </li>
-            <li>
-              <p id="slide-credit" class="slide-3">Кредит</p>
-            </li>
-          </ul>
+          <form class="slider-button_list">
+              <label class="services-slide-button" for="slide-delivery">Доставка</label>
+              <input class="visually-hidden" id="slide-delivery" type="radio" name="services-slide-radio">
+              <label class="services-slide-button" for="slide-assurance">Гарантия</label>
+              <input class="visually-hidden" id="slide-assurance" type="radio" name="services-slide-radio">
+              <label class="services-slide-button" for="slide-credit">Кредит</label>
+              <input class="visually-hidden" id="slide-credit" type="radio" name="services-slide-radio">
+          </form>
           <ul class="slider-content_list">
             <li>
               <h3>Доставка</h3>
@@ -230,7 +229,7 @@
     </main>
     <footer class="page-footer">
       <div class="footer-header">
-        <a class="footer-logo"><img class="footer-logo" src="img/logo.png" width="138" height="23" alt="Техномарт">Техномарт</a>
+        <a class="footer-logo"><img class="footer-logo" src="img/logo.png" width="138" height="23" alt="Логотип Техномарт">Техномарт</a>
         <nav class="footer-navigation">
           <ul class="footer-menu">
             <li><a href="about-us.html">Компания</a></li>
@@ -240,10 +239,10 @@
             <li><a href="cantacts.html">Контакты</a></li>
           </ul>
         </nav>
-        <p class="address">
+        <address class="address">
           г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
           +7 (812) 555-05-55
-        </p>
+        </address>
         <nav class="product-menu_navigation">
           <ul class="product-menu_list">
             <li><a href="#">Материалы</a></li>
@@ -254,36 +253,37 @@
         </nav>
       </div>
       <div class="footer-buttom">
-        <p class="copyright"></p>
+        <p class="copyright">© 2010–2017 Компания «Техномарт» Все права защищены</p>
         <ul class="social_list">
-          <li><a href="#">Вконтакте</a></li>
-          <li><a href="#">Фейсбук</a></li>
-          <li><a href="#">Инстаграм</a></li>
+          <li><a href="#" aria-label="Мы в Вконтакте">Вконтакте</a></li>
+          <li><a href="#" aria-label="Мы в Фейсбук">Фейсбук</a></li>
+          <li><a href="#" aria-label="Мы в Инстаграм">Инстаграм</a></li>
         </ul>
         <p class="feedback_mail">
           <b>Обратная связь:</b>
-          <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          <a href="mailto:mail@htmlacademy.ru" aria-label="Написать разработчику">mail@htmlacademy.ru</a>
         </p>
         <p class="produced-by">
           <b>Разработано -</b>
-          <a href="https://htmlacademy.ru">htmlacademy.ru</a>
+          <a href="https://htmlacademy.ru" aria-label="Сайт разработчика">htmlacademy.ru</a>
         </p>
       </div>
     </footer>
-    <!--
+    <!-- модальные окна -->
     <section class="modal-map">
       <h2 class="visually-hidden">Как до нас дораться</h2>
-      <a class="modal-map" href=""><img src="img/map-big.jpg" alt="Карта проезда"></a>
+      <a class="modal-map" href="#" aria-label="Большая Конюшенная 19/8"><img src="img/map-big.jpg" alt="Карта проезда"></a>
+      <button class="modal-close" type="button">Закрыть</button>
     </section>
     <section class="modal-feedback">
       <h2 class="visually-hidden">Напишите нам</h2>
-      <form>
-        <label for="name">Ваше имя:<input type="text" name="name" value="Имя Фамилия"></label>
-        <label for="email">Ваш e-mail:<input type="email" name="email" value="example@example.com"></label>
+      <form name="feedback" action="mailto:mail@htmlacademy.ru" method="post">
+        <label for="name">Ваше имя:</label><input type="text" name="name" value="Имя Фамилия">
+        <label for="email">Ваш e-mail:</label><input type="email" name="email" value="example@example.com">
         <label for="feedback-content">Текст письма:</label>
         <textarea id="feedback-content" name="feedback-content" cols="30" rows="10">В свободной форме</textarea>
       </form>
+      <button class="modal-close" type="button">Закрыть</button>
     </section>
-    --> 
   </body>
 </html>
