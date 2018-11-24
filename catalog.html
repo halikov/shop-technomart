@@ -7,7 +7,10 @@
   <body>
     <header class="page-header">
       <div class="page-header_top-line">
-        <a class="logo" href="index.html" aria-label="Техномарт"><img class="logo-img" src="img/logo.png" width="111" height="18" alt="Техномарт">Техномарт</a>
+        <a class="logo" href="index.html" aria-label="Техномарт">
+          <img class="logo-img" src="img/logo.png" width="111" height="18" alt="Техномарт">
+          Техномарт
+        </a>
         <form class="search-form" name="search-form">
           <input class="search" type="search" placeholder="Поиск">
           <button class="button button-search"type="submit">Искать</button>
@@ -23,14 +26,16 @@
           <span class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
         </p>
         <p>
-          <!-- псевдоклассом a::before добавим иконку пользователя по ТЗ 3.4 имя и иконка являются ссылкой на профайл, 
-            а иконка выхода на страницу деавторизации. Может стоит все же кнопку выхода разметить ссылкой? -->
           <a class="user-account" href="profile.html">Равшан Джамшутович</a>
           <button class="button_log-out" type="button">Выйти</button>
         </p>
         <ul class="account-menu">
-          <li><a class="my-purchases" href="shopping-cart.html">Мои заказы</a></li>
-          <li><a class="user-account" href="profile.html">Личный кабинет</a></li>
+          <li>
+            <a class="my-purchases" href="shopping-cart.html">Мои заказы</a>
+          </li>
+          <li>
+            <a class="user-account" href="profile.html">Личный кабинет</a>
+          </li>
         </ul>
       </div>
       <nav class="page-header_navigation">
@@ -60,12 +65,8 @@
           <legend>Цена:</legend>
           <div class="price-range">
             <div class="range-container">
-              <span class="min">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="23" viewBox="0 0 20 23"><path opacity=".3" fill="#ABABAB" d="M10 20C4.477 20 0 15.522 0 10v2c0 5.522 4.477 10 10 10 5.522 0 10-4.478 10-10v-2c0 5.522-4.478 10-10 10z"/><circle fill="#FFF" cx="10" cy="10" r="10"/><circle fill="#ABABAB" cx="10" cy="10" r="2"/></svg>
-              От</span>
-              <span class="ma">До
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="23" viewBox="0 0 20 23"><path opacity=".3" fill="#ABABAB" d="M10 20C4.477 20 0 15.522 0 10v2c0 5.522 4.477 10 10 10 5.522 0 10-4.478 10-10v-2c0 5.522-4.478 10-10 10z"/><circle fill="#FFF" cx="10" cy="10" r="10"/><circle fill="#ABABAB" cx="10" cy="10" r="2"/></svg>
-              </span>  
+              <span class="min">От</span>
+              <span class="ma">До</span>  
             </div>
             <div class="output">
               <output class="range-output-min" name="min">0</output>
@@ -94,13 +95,13 @@
           <input id="ac" type="radio" name="supply">
           <label for="ac">Сетевые</label>
         </fieldset>
-        <input class="filter_show" name="submit" type="submit" value="Показать">
+        <button class="filter_show" type="submit">Показать</button>
       </form> 
     </section>
     <section class="catalog-items">
-      <div class="sorting-list">
+      <div class="sorting-menu">
         <h3>Сортировка</h3>
-        <ul>
+        <ul class="sorting-list">
           <li>
             <button class="btn-sort sort-by-price" type="submit">По цене</button>
           </li>
@@ -124,13 +125,11 @@
             <a href="catalog-item.html">Перфоратор BOSCH BFG 3000</a>
           </h3> 
           <p>
-            <a href="catalog-item.html">
               <img src="img/bosch-bfg-3000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
-            </a>
           </p>
           <p>
-          <span class="old-price"><del>22 500 P</del></span>
-            <a class="price" href="">15 500 P</a>
+            <span class="old-price"><del>22 500 &#8381;</del></span>
+            <span class="price" href="">15 500 &#8381;</span>
           </p>
           <p>
             <button type="submit" name="buy">Купить</button>
@@ -148,12 +147,12 @@
             </a>
           </p>
           <p>
-          <span class="old-price"><del>30 500 P</del></span>
-            <a class="price" href="">22 500 P</a>
+          <span class="old-price"><del>30 500 &#8381;</del></span>
+            <a class="price" href="">22 500 &#8381;</a>
           </p>
           <p>
-            <input type="submit" name="buy" value="Купить">
-            <input type="submit" name="bookmark" value="В закладки">
+            <button type="submit" name="buy">Купить</button>
+            <button type="submit" name="bookmark">В закладки</button>
           </p>
           <span class="visually-hidden label-new">new</span>
         </li>
@@ -167,12 +166,12 @@
             </a>
           </p>
           <p>
-          <span class="visually-hidden old-price"><del>12 500 P</del></span>
-            <a class="price" href="">12 500 P</a>
+          <span class="visually-hidden old-price"><del>12 500 &#8381;</del></span>
+            <a class="price" href="">12 500 &#8381;</a>
           </p>
           <p>
-            <input type="submit" name="buy" value="Купить">
-            <input type="submit" name="bookmark" value="В закладки">
+            <button type="submit" name="buy">Купить</button>
+            <button type="submit" name="bookmark">В закладки</button>
           </p>
           <span class="visually-hidden label-new">new</span>
         </li>
@@ -186,12 +185,12 @@
             </a>
           </p>
           <p>
-          <span class="old-price"><del>22 500 P</del></span>
-            <a class="price" href="">15 500 P</a>
+          <span class="old-price"><del>22 500 &#8381;</del></span>
+            <a class="price" href="">15 500 &#8381;</a>
           </p>
           <p>
-            <input type="submit" name="buy" value="Купить">
-            <input type="submit" name="bookmark" value="В закладки">
+            <button type="submit" name="buy">Купить</button>
+            <button type="submit" name="bookmark">В закладки</button>
           </p>
           <span class="visually-hidden label-new">new</span>
         </li>
@@ -205,12 +204,12 @@
             </a>
           </p>
           <p>
-          <span class="old-price"><del>30 500 P</del></span>
-            <a class="price" href="">25 500 P</a>
+            <span class="old-price"><del>30 500 &#8381;</del></span>
+            <a class="price" href="">25 500 &#8381;</a>
           </p>
           <p>
-            <input type="submit" name="buy" value="Купить">
-            <input type="submit" name="bookmark" value="В закладки">
+            <button type="submit" name="buy">Купить</button>
+            <button type="submit" name="bookmark">В закладки</button>
           </p>
           <span class="visually-hidden label-new">new</span>
         </li>
@@ -224,12 +223,12 @@
             </a>
           </p>
           <p>
-            <span class="old-price visually-hidden">22 500 P</span>
-            <a class="price" href="">12 500 P</a>
+            <span class="old-price visually-hidden"><del>22 500 &#8381;</del></span>
+            <a class="price" href="">12 500 &#8381;</a>
           </p>
           <p>
-            <input type="submit" name="buy" value="Купить">
-            <input type="submit" name="bookmark" value="В закладки">
+            <button type="submit" name="buy">Купить</button>
+            <button type="submit" name="bookmark">В закладки</button>
           </p>
           <span class="visually-hidden label-new">new</span>
         </li>
@@ -243,12 +242,12 @@
             </a>
           </p>
           <p>
-            <span class="old-price visually-hidden">22 500 P</span>
-            <a class="price" href="">15 500 P</a>
+            <span class="old-price visually-hidden"><del>22 500 &#8381;</del></span>
+            <a class="price" href="">15 500 &#8381;</a>
           </p>
           <p>
-            <input type="submit" name="buy" value="Купить">
-            <input type="submit" name="bookmark" value="В закладки">
+            <button type="submit" name="buy">Купить</button>
+            <button type="submit" name="bookmark">В закладки</button>
           </p>
           <span class="visually-hidden label-new">new</span>
         </li>
@@ -262,12 +261,12 @@
             </a>
           </p>
           <p>
-          <span class="old-price visually-hidden"><del>30 500 P</del></span>
-            <a class="price" href="">22 500 P</a>
+            <span class="old-price visually-hidden"><del>30 500 &#8381;</del></span>
+            <a class="price" href="">22 500 &#8381;</a>
           </p>
           <p>
-            <input type="submit" name="buy" value="Купить">
-            <input type="submit" name="bookmark" value="В закладки">
+            <button type="submit" name="buy">Купить</button>
+            <button type="submit" name="bookmark">В закладки</button>
           </p>
           <span class="visually-hidden label-new">new</span>
         </li>
@@ -281,12 +280,12 @@
             </a>
           </p>
           <p>
-            <span class="old-price visually-hidden">12 500 P</span>
-            <a class="price" href="">12 500 P</a>
+            <span class="old-price visually-hidden"><del>12 500 &#8381;</del></span>
+            <a class="price" href="">12 500 &#8381;</a>
           </p>
           <p>
-            <input type="submit" name="buy" value="Купить">
-            <input type="submit" name="bookmark" value="В закладки">
+            <button type="submit" name="buy">Купить</button>
+            <button type="submit" name="bookmark">В закладки</button>
           </p>
           <span class="visually-hidden label-new">new</span>
         </li>
@@ -349,18 +348,11 @@
       </div>
     </footer>
     <section class="visually-hidden modal-cart-added">
-      <p>
-      <span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="66" height="66" viewBox="0 0 66 66">
-          <circle fill="#63A63E" cx="33" cy="33" r="33"/>
-          <path fill="#FFF" d="M49.641 21.066a1.003 1.003 0 0 0-1.414 0L29.788 39.504a1.003 1.003 0 0 1-1.414 0l-8.14-8.139a1.003 1.003 0 0 0-1.414 0L15.285 34.9a1.003 1.003 0 0 0 0 1.414l13.089 13.09a1.003 1.003 0 0 0 1.414 0l3.536-3.536 1.414-1.414 18.438-18.438a1.003 1.003 0 0 0 0-1.414l-3.535-3.536z"/>
-        </svg>
-      </span>Товар добавлен в корзину!</p>
+      <p>Товар добавлен в корзину!</p>
       <a class="checkout" href="">Оформить заказ</a>
       <a class="continue-shopping" href="">Продолжить покупки</a>
       <button class="modal-close">
         Закрыть
-          <svg enable-background="new 0 0 21 21" height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><path d="m13.273 10.5 7.422-7.422c.389-.389.389-1.025 0-1.414l-1.359-1.359c-.389-.389-1.025-.389-1.414 0l-7.422 7.422-7.422-7.422c-.389-.389-1.025-.389-1.414 0l-1.359 1.359c-.389.389-.389 1.025 0 1.414l7.422 7.422-7.421 7.422c-.389.389-.389 1.025 0 1.414l1.359 1.359c.389.389 1.025.389 1.414 0l7.422-7.422 7.422 7.422c.389.389 1.025.389 1.414 0l1.359-1.359c.389-.389.389-1.025 0-1.414z" fill="#ee3643"/></svg>
       </button>
     </section>
   </body>
