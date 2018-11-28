@@ -3,6 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт / Каталог</title>
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
     <header class="page-header">
@@ -60,7 +64,7 @@
     <h1>Перфораторы</h1>
     <section class="filters">
       <h2 class="visually-hidden">Фильтр</h2>
-      <form name="product-filter">
+      <form name="product-filter" method="post" action="https://echo.htmlacademy.ru">
         <fieldset>
           <legend>Цена:</legend>
           <div class="price-range">
@@ -103,19 +107,19 @@
         <h3>Сортировка</h3>
         <ul class="sorting-list">
           <li>
-            <button class="btn-sort sort-by-price" type="submit">По цене</button>
+            <a class="btn-sort sort-by-price" type="submit">По цене</a>
           </li>
           <li>
-            <button class="btn-sort sort-by-type" type="submit">По типу</button>
+            <a class="btn-sort sort-by-type" type="submit">По типу</a>
           </li>
           <li>
-            <button class="btn-sort sort-by-functionality">По функционалу</button>
+            <a class="btn-sort sort-by-functionality">По функционалу</a>
           </li>
           <li>
-            <button class="btn-up">Up</button>
+            <span class="btn-up">Up</span>
           </li>
           <li>
-            <button class="btn-down">Down</button>
+            <span class="btn-down">Down</span>
           </li>
         </ul>
       </div>
