@@ -135,7 +135,10 @@ input[type="radio"].visually-hidden {
 .search:hover ~ .button-search {
   opacity: 1;
 }
-.search:focus ~ path {
+.search:focus ~ .button-search {
+  opacity: 1;
+}
+.search:focus ~ .button-search path {
   fill: #ee3643;
 }
 .bookmarks, 
@@ -153,7 +156,7 @@ input[type="radio"].visually-hidden {
   color: #ffffff;
 }
 .bookmarks {
-  padding: 12px 28px 11px 44px;
+  padding: 12px 28px 12px 44px;
 }
 .bookmarks:before {
   content: "";
@@ -167,7 +170,7 @@ input[type="radio"].visually-hidden {
   opacity: 0.3;
 }
 .basket {
-  padding: 11px 31px 11px 50px;
+  padding: 12px 31px 12px 50px;
 }
 .basket:before {
   content: "";
@@ -182,7 +185,7 @@ input[type="radio"].visually-hidden {
 }
 
 .checkout {
-  padding: 11px 20px;
+  padding: 12px 20px;
   margin-right: 0;
   font-family: 'Cuprum', 'Arial', sans-serif; 
   font-size: 17px;
@@ -308,12 +311,19 @@ address {
   background-image: url('../img/icon-login.svg');
   background-position: 0 0;
   background-color: transparent;
+  opacity: 0.3;
+}
+.log-in:hover::before {
+  opacity: 1;
 }
 .log-in:hover,
 .log-in:focus,
 .sign-in:hover,
 .sign-in:focus {
   color: #ee3643;
+}
+.log-in:active::before {
+  opacity: 0.3;
 }
 .log-in:active,
 .sign-in:active {
@@ -676,12 +686,14 @@ address {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 25px;
+  padding: 0;
   margin-bottom: 20px;
   background-color: #f9f5f0;
 }
 .popular-products h2,
 .popular-brands h2 {
+  margin: 0;
+  padding: 29px 30px;
   font-family: 'Cuprum', 'Arial', sans-serif;
   font-size: 30px;
   line-height: 30px;
@@ -692,6 +704,9 @@ address {
 }
 .popular-products a.all-popular-products,
 .popular-brands a.all-popular-brands {
+  display: block;
+  margin: 25px 24px;
+  padding: 10px 55px;
   font-family: 'Cuprum', 'Arial', sans-serif;
   font-size: 14px;
   line-height: 17.5px;
@@ -700,6 +715,7 @@ address {
   text-align: center;
   text-decoration: none;
   color: #ffffff;
+  border-radius: 3px;
   background-color: #ee3643;
 }
 .popular-products .all-popular-products:hover,
@@ -722,78 +738,123 @@ address {
   padding: 0;
   list-style: none;
 }
-.products_list li {
-  width: 220px;
+.products-list-item {
+  position: relative;
+  width: 218px;
   height: 318px;
   margin-right: 20px;
-  outline:  1px solid #eaeaea;
+  margin-bottom: 20px;
+  text-align: center;
+  border:  1px solid #eaeaea;
 }
-.products_list li:nth-child(4n) {
+.products-list-item .flag {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  width: 60px;
+  height: 60px;
+  text-indent: -1000px;
+  overflow: hidden;
+  z-index: 20;
+}
+.products-list-item .flag-new {
+  background: url('../img/new-flag.png') no-repeat 0 0;
+}
+.products-list-item .actions {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 218px;
+  height: 88px;
+  padding: 40px 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 10;
+}
+.actions .buy,
+.actions .bookmark {
+  display: block;
+  width: 129px;
+  margin: 0 auto;
+  margin-bottom: 7px;
+  padding: 7px 0;
+  border: 3px solid #63a63e;
+  border-bottom-color: #367315;
+  background-color: #63a63e;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Cuprum', 'Arial', sans-serif;
+  line-height: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+.actions .bookmark {
+  color: #32425c;
+  background-color: #ffffff;
+  border-bottom-color: #63a63e;
+}
+.products-list-item .actions {
+  display: none;
+}
+.products-list-item:hover .actions {
+  display: block;
+}
+.products-item-image {
+  width: 218px;
+  height: 168px;
+  line-height: 168px;
+  text-align: center;
+}
+.products-item-image img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+.products-list-item:nth-child(4n) {
   margin-right: 0;
 }
-.products_list li:hover,
-.products_list li:focus {
+.products-list-item:hover,
+.products-list-item:focus {
   box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
   background-color: #ffffff;
 }
-.product_item {
-  margin-right: 20px;
+
+.products-item-title {
+  min-height: 40px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding: 0 25px;
   font-family: 'PT Sans', 'Arial', sans-serif;
   font-size: 18px;
   line-height: 20px;
   font-weight: 700;
-  text-decoration: none;
   text-align: center;
   color: #000000;
 }
-p.visually-hidden button[name="buy"] {
-  font-family: 'Cuprum', 'Arial', sans-serif;
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: 400;
-  text-align: center;
-  text-transform: uppercase;
-  color: #ffffff;
-  border: none;
-  background-color: #63a63e;
-}
-p.visually-hidden button[name="buy"]:hover,
-p.visually-hidden button[name="buy"]:focus {
-  background-color: #5fbb2d;
-}
-p.visually-hidden button[name="buy"]:active {
-  background-color: #518534;
+.products-item-title a {
+  color: inherit; 
 }
 
-p.visually-hidden button[name="bookmark"] {
-  font-family: 'Cuprum', 'Arial', sans-serif;
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: 400;
-  text-align: center;
-  text-transform: uppercase;
-  color: #32425c;
-  border-radius: 3px;
-  border: 3px solid #63a63e;
-  background-color: #ffffff;
-}
-p.visually-hidden button[name="bookmark"]:hover,
-p.visually-hidden button[name="bookmark"]:focus {
-  border-color: #32425c;
-}
-p.visually-hidden button[name="bookmark"]:active {
-  color: rgba(50, 66, 92, 0.3);
-  border-color: rgba(50, 66, 92, 0.3);
-}
 .old-price {
+  display: block;
+  min-height: 20px;
+  margin-top: 15px;
+  margin-bottom: 10px;
   font-family: 'PT Sans', 'Arial', sans-serif;
   font-size: 17px;
   line-height: 18px;
   font-weight: 700;
   text-align: center;
+  text-decoration: line-through;
   color: #999999;
 }
 .new-price {
+  display: block;
+  position: relative;
+  width: 80px;
+  margin: 10px auto;
+  margin-bottom: 20px;
+  padding: 10px 30px;
   font-family: 'PT Sans', 'Arial', sans-serif;
   font-size: 17px;
   line-height: 18px;
@@ -802,28 +863,44 @@ p.visually-hidden button[name="bookmark"]:active {
   color: #ffffff;
   background-color: #ee3643;
 }
-.popular-brands li {
-  width: 220px;
+.new-price::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -20px;
+  width: 0;
+  height: 0;
+  border: 20px solid white;
+  border-left-color: #ee3643;
+}
+.brands-list-item {
+  width: 218px;
   height: 145px;
   padding: 0;
   margin-right: 20px;
   margin-bottom: 20px;
+  line-height: 145px;
   font-size: 0;
-  outline: 1px solid #e5e5e5;
+  text-align: center;
+  border: 1px solid #e5e5e5;
 }
-.popular-brands li:nth-child(4n) {
+.brands-list-item a {
+  text-indent: -1000px;
+  font-size: 0;
+}
+.brands-list-item:nth-child(4n) {
   margin-right: 0;
 }
-.popular-brands img {
+.brands-list-item img {
   text-align: center;
   vertical-align: middle;
 }
-.popular-brands li:hover,
-.popular0brands li:focus {
+.brands-list-item:hover,
+.brands-list-item:focus {
   background-color: #ffffff;
   box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
 }
-.popular-brands li:active {
+.brands-list-item:active {
   background-color: #ffffff;
   box-shadow: 0 10px 4px 0 rgba(41, 52, 73, 0.5);
 }
