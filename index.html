@@ -12,10 +12,14 @@
     <header class="page-header">
       <div class="page-header_top-line">
         <div class="container top-line-wrapper">
-          <a class="logo" aria-label="Техномарт"><img class="logo-img" src="img/logo.png" width="111" height="18" alt="Логотип Техномарт">Техномарт</a>
+          <a class="logo" aria-label="Техномарт"><img class="logo-img" src="img/logo.png" width="111" height="18" alt="Логотип Техномарт"></a>
           <form class="search-form" name="search-form" method="post" action="https://echo.htmlacademy.ru">
             <input class="search" type="search" aria-label="Поиск по сайту" placeholder="Поиск">
-            <button class="button button-search" type="submit">Искать</button>
+            <button class="button-search" type="submit">Искать
+              <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+                <path fill="#ffffff" d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z"/>
+              </svg>
+            </button>
           </form>
           <a class="bookmarks" href="bookmarks.html">Закладки</a>
           <a class="basket" href="shopping-cart.html" aria-label="Корзина">Корзина</a>
@@ -52,29 +56,41 @@
           <li class="promo_list-item">
             <h3>Материалы</h3>
             <a href="#" class="link-promo">На любой вкус</a>
-            <span class="new">new</span>
+            <span class="flag-new">new</span>
           </li>
           <li class="promo_list-item">
             <h3>Инструмент</h3>
             <a href="#" class="link-promo">На все случаи</a>
-            <span class="new visually-hidden">new</span>
+            <span class="flag-new visually-hidden">new</span>
           </li>
           <li class="promo_list-item">
             <h3>Техника</h3>
             <a href="#" class="link-promo">Для стройки</a>
-            <span class="new visually-hidden">new</span>
+            <span class="flag-new visually-hidden">new</span>
           </li>
-          <li class="promo_list-item">
-            <h3>Скидки 50%</h3>
-            <a href="#" class="link-promo">На 350 товаров</a>
-            <span class="new visually-hidden">new</span>
-          </li>
-          <li class="promo_list-item">
-            <h3>Доставка</h3>
-            <a href="#" class="link-promo">Бесплатно</a>
-            <span class="new visually-hidden">new</span>
+          <li class="double-promo-item promo_list-item">
+            <ul>
+              <li class="promo-item-1">
+                <h3>Скидки 50%</h3>
+                <a href="#" class="link-promo">На 350 товаров</a>
+                <span class="flag-new visually-hidden">new</span>
+              </li>
+              <li class="promo-item-2">
+                <h3>Доставка</h3>
+                <a href="#" class="link-promo">Бесплатно</a>
+                <span class="flag-new visually-hidden">new</span>
+              </li>
+            </ul>
           </li>
           <li class="slider">
+            <input class="visually-hidden" id="back" type="radio" name="toggle" checked>
+            <input class="visually-hidden" id="next" type="radio" name="toggle">
+            <div class="slider-controls">
+              <label class="slider-controls-item slider-controls-item--1" for="back">Пред.</label>
+              <label class="slider-controls-item slider-controls-item--2" for="next">След.</label>
+            </div>
+            <button class="button button-slider-back" type="button">Пред.</button>
+            <button class="button button-slider-next" type="button">След.</button>
             <ul class="slider-list">
               <li class="slider-list-item">
                 <h3>Дрели</h3>
@@ -87,16 +103,7 @@
                 <span>Настоящие мужские игрушки</span>
                 <a class="link-slide" href="catalog.html">Открыть каталог</a>
               </li>
-
             </ul>
-            <form class="slide-buttons">
-              <input id="pre" type="radio" name="btn-slide">
-              <input id="next" type="radio" name="btn-slide">
-              <label class="visually-hidden" for="pre">Пред.</label>
-              <label class="visually-hidden" for="next">След.</label>
-            </form>
-            <button class="button button-slider-prev" type="button">Пред.</button>
-            <button class="button button-slider-next" type="button">След.</button>
           </li>
         </ul> 
       </section>
