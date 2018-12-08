@@ -23,7 +23,7 @@
               </svg>
             </button>
           </form>
-          <a class="bookmarks" href="bookmarks.html">Закладки: <span class="bookmarks-count">0</span></a>
+          <a class="header-bookmarks" href="bookmarks.html">Закладки: <span class="bookmarks-count">0</span></a>
           <a class="basket" href="shopping-cart.html" aria-label="Корзина">Корзина: <span class="basket-count">0</span></a>
           <a class="checkout" href="checkout.html" aria-label="Оформить заказ">Оформить заказ</a>
         </div>
@@ -34,10 +34,12 @@
           <span class="telephone">+7(812) 555-05-55</span>
           <span class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
         </address>
-        <ul class="account-menu">
-          <li><a class="log-in" href="#">Войти</a></li>
-          <li><a class="sign-in" href="#">Регистрация</a></li>
-        </ul>
+        <div class="user-info">
+          <ul class="account-menu">
+            <li><a class="log-in" href="#">Войти</a></li>
+            <li><a class="sign-in" href="#">Регистрация</a></li>
+          </ul>
+        </div>
       </div>
       <nav class="page-header_navigation container">
         <ul class="main-menu">
@@ -85,27 +87,29 @@
             </ul>
           </li>
           <li class="slider">
-            <div class="slider-controls">
-              <input class="back visually-hidden" id="back" type="radio" name="toggle" checked="">
-              <input class="next visually-hidden" id="next" type="radio" name="toggle">
-              <label class="slider-controls-item slider-controls-item--1" for="back">Пред.</label>
-              <label class="slider-controls-item slider-controls-item--2" for="next">След.</label>
-            </div>
-            <button class="button button-slider-back" type="button">Пред.</button>
-            <button class="button button-slider-next" type="button">След.</button>
+              <input class="input-prev visually-hidden" id="slide1" type="radio" name="toggle" checked />
+              <input class="input-next visually-hidden" id="slide2" type="radio" name="toggle"/>
             <ul class="slider-list">
-              <li class="slider-list-item">
+              <li class="slider-list-item" id="slide-item-1">
                 <h3>Дрели</h3>
                 <span>Соседям на радость</span>
                 <a class="link-slide" href="catalog.html">Открыть каталог</a>
+                <label class="prev" for="slide1"></label>
+                <label class="next" for="slide2"></label>
               </li>
 
-              <li class="slider-list-item">
+              <li class="slider-list-item" id="slide-item-2">
                 <h3>Перфораторы</h3>
                 <span>Настоящие мужские игрушки</span>
                 <a class="link-slide" href="catalog.html">Открыть каталог</a>
+                <label class="prev" for="slide1"></label>
+                <label class="next" for="slide2"></label>
               </li>
             </ul>
+            <div class="slider-controls">
+              <label class="slider-controls-item slider-controls-item--1" for="slide1">Пред.</label>
+              <label class="slider-controls-item slider-controls-item--2" for="slide2">След.</label>
+            </div>
           </li>
         </ul> 
       </section>
@@ -226,7 +230,7 @@
               <ul class="slider-content-list">
                 <li class="content-list-item delivery-content">
                   <h3>Доставка</h3>
-                  <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!</p>
+                  <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем,<br> поднимая его на ваш этаж!</p>
                 </li>
                 <li class="content-list-item assurance-content">
                   <h3>Гарантия</h3>
@@ -243,10 +247,11 @@
         </div>
       </section>
       <div class="contacts-wrapper container">
+        
         <section class="about-us">
           <h3 class="about-us_title">КОМПАНИЯ «Техномарт»</h3>
           <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
-          <p>Мы можем доставить ваш товар в самые отдаленные точки России!
+          <p>Мы можем доставить ваш товар в самые отдаленные точки России!<br>
           Техномарт работает со многими транспортными компаниями:</p>
           <ul class="logistics-list">
             <li>Деловые линии</li>
@@ -266,11 +271,15 @@
           </div>
           <button class="button_write-us" type="button">Заблудились? Напишите нам!</button>
         </section>
+
+        
       </div>
     </main>
     <footer class="page-footer">
       <div class="footer-header container">
-        <a class="footer-logo"><img src="img/footer-logo.svg" width="138" height="23" alt="Логотип Техномарт">Техномарт</a>
+        <a class="footer-logo">
+          <img src="img/footer-logo.svg" width="138" height="23" alt="Логотип Техномарт">Техномарт
+        </a>
         <nav class="footer-navigation">
           <ul class="footer-menu">
             <li><a href="about-us.html">Компания</a></li>
@@ -315,28 +324,38 @@
       </div>
     </footer> 
     <!-- модальные окна -->
-<!--    <section class="modal-map-big">
+
+    <section class="modal-map-big visually-hidden">
       <h2 class="visually-hidden">Как до нас добраться</h2>
-      <a class="modal-map" href="#" aria-label="Большая Конюшенная 19/8">
-        <img src="img/map-big.jpg" alt="Карта проезда">
-      </a>
-      <button class="modal-close" type="button">Закрыть</button>
-    </section>
-    <section class="modal-feedback">
-      <h2 class="visually-hidden">Напишите нам</h2>
-      <form name="feedback" action="mailto:mail@htmlacademy.ru" method="post">
-        <label for="user-name">Ваше имя:</label>
-        <input type="text" name="name" id="user-name" value="" placeholder="Имя Фамилия">
-        <label for="user-email">Ваш e-mail:</label>
-        <input type="email" name="email" id="user-email" value="" placeholder="example@example.com">
-        <label for="feedback-content">Текст письма:</label>
-        <textarea id="feedback-content" name="feedback-content" cols="30" rows="10" placeholder="В свободной форме"></textarea>
-        <div class="feedback-bottom">
-          <button class="feedback-button" type="submit" name="submit">Отправить</button>
-        </div>
-      </form>
+      <div class="map-wrapper">
+        <a class="modal-map" href="#" aria-label="Большая Конюшенная 19/8">
+          <img src="img/map-big.jpg" alt="Карта проезда">
+        </a>
         <button class="modal-close" type="button">Закрыть</button>
+      </div>
     </section>
-    -->
+
+    <section class="modal-feedback visually-hidden">
+        <h2 class="visually-hidden">Напишите нам</h2>
+        <form class="feedback-form" name="feedback" action="mailto:mail@htmlacademy.ru" method="post">
+          <div class="user-name-column">
+            <label for="user-name">Ваше имя:</label>
+            <input type="text" name="name" id="user-name" value="" placeholder="Имя Фамилия">
+          </div>
+          <div class="user-email-column">
+            <label for="user-email">Ваш e-mail:</label>
+            <input type="email" name="email" id="user-email" value="" placeholder="example@example.com">
+          </div>
+          <div class="textarea-column">
+            <label for="feedback-content">Текст письма:</label>
+            <textarea id="feedback-content" name="feedback-content"  placeholder="В свободной форме"></textarea>
+          </div>
+          <div class="feedback-form-bottom">
+            <button class="feedback-button" type="submit" name="submit">Отправить</button>
+          </div>
+        </form>
+          <button class="modal-close" type="button">Закрыть</button>
+      </section>
+
   </body>
 </html>
