@@ -111,6 +111,7 @@ input[type="radio"].visually-hidden {
   color: #ffffff;
   background-color: #293449;
   border: none;
+  box-sizing: border-box;
 }
 .button-search {
   position: absolute;
@@ -142,6 +143,8 @@ input[type="radio"].visually-hidden {
   opacity: 1;
 }
 .search:focus ~ .button-search {
+  outline: 1px dotted #212121;
+  outline: 5px auto -webkit-focus-ring-color;
   opacity: 1;
 }
 .search:focus ~ .button-search path {
@@ -372,6 +375,7 @@ address {
   width: 940px;
   margin-bottom: 60px;
   background-color: #32425c;
+  box-shadow: 0 5px 0 0 #293449;
   box-sizing: border-box;
 }
 .main-menu {
@@ -400,6 +404,7 @@ address {
   color: #ffffff;
   text-decoration: none;
 }
+.main-menu a:not([href]),
 .main-menu a:hover,
 .main-menu a:focus {
   background-color: #293149;
@@ -419,8 +424,8 @@ address {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+  margin-bottom: 33px;
   padding: 0;
-  margin-bottom: 30px;
   font-family: 'Cuprum', 'Arial', sans-serif;
   font-size: 14px;
   line-height: 18px;
@@ -553,6 +558,7 @@ address {
   margin: 0;
   margin-right: 20px;
   padding: 0;
+  /* временно  */
   background-color: #ccc;
 }
 
@@ -691,11 +697,11 @@ address {
   padding: 10px;
 }
 
-#slide1:checked ~ .slider-list .drills {
+#slide1:checked ~ .slider-list .slider-list-item:nth-child(1) {
   display: block;
 }
 
-#slide2:checked ~ .slider-list .perforators {
+#slide2:checked ~ .slider-list .slider-list-item:nth-child(2) {
   display: block;
 }
 
@@ -709,6 +715,10 @@ address {
   border-radius: 50%;
   background-color: #ffffff;
 } 
+.slider-dots input[type="radio"]:focus + .slider-dots-indicator {
+  outline: 1px dotted #212121;
+  outline: 5px auto -webkit-focus-ring-color;
+}
 
 .slider-dots input[type="radio"]:checked + .slider-dots-indicator::after {
   content: "";
@@ -772,6 +782,10 @@ address {
   color: #ffffff;
   border-radius: 3px;
   background-color: #ee3643;
+  box-sizing: border-box;
+}
+.popular-brands a.all-popular-brands {
+  padding: 10px 69px;
 }
 .popular-products .all-popular-products:hover,
 .popular-products .all-popular-products:focus,
@@ -866,15 +880,18 @@ address {
   display: block;
 }
 .products-item-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 218px;
   height: 168px;
-  line-height: 168px;
   text-align: center;
 }
 .products-item-image img {
+  display: block;
   max-width: 100%;
-  margin: 0 auto;
-  vertical-align: middle;
+  margin: 0;
+  padding: 0;
 }
 .products-list-item:nth-child(4n) {
   margin-right: 0;
@@ -891,10 +908,18 @@ address {
   background-color: #ffffff;
 }
 
+.products-item-caption {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .products-item-title {
   min-height: 40px;
   margin-top: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
   padding: 0 25px;
   font-family: 'PT Sans', 'Arial', sans-serif;
   font-size: 18px;
@@ -910,8 +935,7 @@ address {
 .old-price {
   display: block;
   min-height: 20px;
-  margin-top: 15px;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
   font-family: 'PT Sans', 'Arial', sans-serif;
   font-size: 17px;
   line-height: 18px;
@@ -924,7 +948,6 @@ address {
   display: block;
   position: relative;
   width: 80px;
-  margin: 10px auto;
   margin-bottom: 20px;
   padding: 10px 30px;
   font-family: 'PT Sans', 'Arial', sans-serif;
@@ -1254,7 +1277,7 @@ address {
 
 .logistics-list {
   margin: 0;
-  margin-bottom: 39px;
+  margin-bottom: 38px;
   padding: 0;
   list-style: none;
 }
@@ -1288,7 +1311,7 @@ address {
 .about-us .button,
 .button_write-us {
   display: block;
-  padding: 10px 40px;
+  padding: 9px 40px;
   font-family: 'Cuprum', 'PT Sans', sans-serif;
   font-size: 14px;
   line-height: 17.5px;
@@ -2249,7 +2272,6 @@ button.filter_show {
 .products-list-item {
   position: relative;
   width: 218px;
-  height: 318px;
   margin-right: 20px;
   text-align: center;
   border:  1px solid #eaeaea;
