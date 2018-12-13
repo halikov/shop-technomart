@@ -113,6 +113,12 @@ input[type="radio"].visually-hidden {
   border: none;
   box-sizing: border-box;
 }
+.search::-webkit-input-placeholder,
+.search::-moz-placeholder,
+.search:-ms-placeholder {
+  color: #ffffff;
+  opacity: 1;
+}
 .button-search {
   position: absolute;
   top: 0;
@@ -122,6 +128,12 @@ input[type="radio"].visually-hidden {
 }
 .search-form .search:hover {
   background-color: #212a3a;
+  opacity: 1;
+}
+.search:hover::-webkit-placeholder,
+.search:hover::-moz-placeholder,
+.search:hover::-ms-placeholder {
+  opacity: 1;
 }
 .search-form .search:focus {
   color: #000000;
@@ -131,9 +143,10 @@ input[type="radio"].visually-hidden {
   background-color: #293449;
 }
 .button-search {
-  display: block;
-  margin: 0;
-  padding: 12px 0;
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  margin-top: 10px;
   font-size: 0;
   border: none;
   background-color: transparent;
@@ -147,6 +160,8 @@ input[type="radio"].visually-hidden {
   outline: 5px auto -webkit-focus-ring-color;
   opacity: 1;
 }
+
+
 .search:focus ~ .button-search path {
   fill: #ee3643;
 }
@@ -1485,9 +1500,6 @@ address {
 }
 .social_list {
   width: 300px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   margin-right: 20px;
   list-style: none;
 }
@@ -1533,9 +1545,6 @@ address {
 }
 .footer-feedback {
   width: 300px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
 }
 .feedback_mail {
   margin-right: 30px;
