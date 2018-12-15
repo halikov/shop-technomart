@@ -23,7 +23,7 @@
               </svg>
             </button>
           </form>
-          <a class="header-bookmarks" href="bookmarks.html">Закладки: <span class="bookmarks-count">0</span></a>
+          <a class="header-bookmarks" href="bookmarks.html">Закладки: <span class="bookmarks-count"></span></a>
           <a class="basket" href="shopping-cart.html" aria-label="Корзина">Корзина: <span class="basket-count">0</span></a>
           <a class="checkout" href="checkout.html" aria-label="Оформить заказ">Оформить заказ</a>
         </div>
@@ -285,7 +285,7 @@
               Б. Конюшенная 19/8
             </a>
           </div>
-          <button class="button_write-us" type="button">Заблудились? Напишите нам!</button>
+          <button class="button_write-us modal-open" type="button">Заблудились? Напишите нам!</button>
         </section>
 
       </div>
@@ -327,9 +327,9 @@
         <div class="footer-bottom-wrapper container">
           <p class="copyright">© 2010–2017 Компания «Техномарт»<br> Все права защищены</p>
           <ul class="social_list">
-            <li><a class="vk" href="#" aria-label="Мы в Вконтакте"></a></li>
-            <li><a class="facebook" href="#" aria-label="Мы в Фейсбук"></a></li>
-            <li><a class="instagram" href="#" aria-label="Мы в Инстаграм"></a></li>
+            <li><a class="vk" href="https://vk.com" aria-label="Мы в Вконтакте"></a></li>
+            <li><a class="facebook" href="https://facebook.com" aria-label="Мы в Фейсбук"></a></li>
+            <li><a class="instagram" href="https://instagrams.com" aria-label="Мы в Инстаграм"></a></li>
           </ul>
           <div class="footer-feedback">
             <p class="feedback_mail">
@@ -344,12 +344,26 @@
         </div>
       </div>
     </footer>
+
     <!-- модальные окна -->
 
-    <section class="modal-map-big visually-hidden">
+    <section class="modal-cart-added modal">
+      <h2 class="visually-hidden">Сообщение о корзине</h2>
+      <p>Товар добавлен в корзину!</p>
+      <div class="modal-bottom">
+        <a class="modal-checkout" href="shoppingcart.html">Оформить заказ</a>
+        <button class="continue-shopping" type="button">Продолжить покупки</button>
+      </div>
+      <button class="modal-close">
+        Закрыть
+      </button>
+    </section>
+
+    <section class="modal modal-map-big">
       <h2 class="visually-hidden">Как до нас добраться</h2>
       <div class="map-wrapper">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002721!2d30.320858715566974!3d59.938719169054814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1544856222166" width="940" height="446" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002721!2d30.320858715566974!3d59.938719169054814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1544856222166" width="940" height="446" allowfullscreen>
+        </iframe>
         <a class="modal-map" href="#" aria-label="Большая Конюшенная 19/8">
           <img src="img/map-big.jpg" width="940" height="446" alt="Карта проезда">
         </a>
@@ -357,7 +371,7 @@
       </div>
     </section>
 
-    <section class="modal-feedback visually-hidden">
+    <section class="modal-feedback modal">
         <h2 class="visually-hidden">Напишите нам</h2>
         <form class="feedback-form" name="feedback" action="mailto:mail@htmlacademy.ru" method="post">
           <div class="user-name-column">
@@ -379,15 +393,7 @@
           <button class="modal-close" type="button">Закрыть</button>
       </section>
 
-  <script>
-    var mapBtn = document.querySelector(".map-service_link");
-
-    var popup = document.querySelector(".modal-map-big");
-
-    mapBtn.addEventListener("click", function (evt) {
-      evt.preventDefault();
-    });
-  </script>
+  <script src="js/modal.js"></script>
 
   </body>
 </html>
