@@ -93,24 +93,26 @@
               </label>
             <div class="slider-controls">
               <label class="slider-dots"  for="slide1">
-                <input class="visually-hidden" id="slide1" type="radio" name="toggle" checked>
+                <input class="slide1 visually-hidden" id="slide1" type="radio" name="toggle" checked>
                 <span class="slider-dots-indicator slide1-dot"></span>
                 Пред.
               </label>
               <label class="slider-dots" for="slide2">
-                <input class="visually-hidden" id="slide2" type="radio" name="toggle">
+                <input class="slide2 visually-hidden" id="slide2" type="radio" name="toggle">
                 <span class="slider-dots-indicator slide2-dot"></span>
                 След.
               </label>
             </div>
             <ul class="slider-list">
               <li class="slider-list-item drills" id="slide-item-1">
+                <img src="img/layer-99.jpg" width="620" height="266" alt="Дрели">
                 <h3>Дрели</h3>
                 <span>Соседям на радость</span>
                 <a class="link-slide" href="catalog.html">Открыть каталог</a>
               </li>
 
               <li class="slider-list-item perforators" id="slide-item-2">
+                <img src="img/layer-99-2.jpg" width="620" height="266" alt="Перфораторы">
                 <h3>Перфораторы</h3>
                 <span>Настоящие мужские игрушки</span>
                 <a class="link-slide" href="catalog.html">Открыть каталог</a>
@@ -347,6 +349,7 @@
     <section class="modal-map-big visually-hidden">
       <h2 class="visually-hidden">Как до нас добраться</h2>
       <div class="map-wrapper">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002721!2d30.320858715566974!3d59.938719169054814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1544856222166" width="940" height="446" frameborder="0" style="border:0" allowfullscreen></iframe>
         <a class="modal-map" href="#" aria-label="Большая Конюшенная 19/8">
           <img src="img/map-big.jpg" width="940" height="446" alt="Карта проезда">
         </a>
@@ -375,6 +378,16 @@
         </form>
           <button class="modal-close" type="button">Закрыть</button>
       </section>
+
+  <script>
+    var mapBtn = document.querySelector(".map-service_link");
+
+    var popup = document.querySelector(".modal-map-big");
+
+    mapBtn.addEventListener("click", function (evt) {
+      evt.preventDefault();
+    });
+  </script>
 
   </body>
 </html>
