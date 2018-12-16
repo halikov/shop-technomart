@@ -1,15 +1,15 @@
-var bookmarked = document.querySelector('.bookmark');
-var bookmarkCount = document.querySelector('.bookmark-count');
+var bookmarkBtn = document.querySelector('.bookmark');
+var bookmarkLabel = document.querySelector('.header-bookmarks');
+var bookmarkCount = bookmarkLabel.querySelector('.bookmarks-count');
 
-bookmarked.addEventListener('click', function(evt) {
+bookmarkBtn.addEventListener('click', function(evt) {
   evt.preventDefault();
-  for(var i = 0; i++;) {
-    bookmarkCount.textContent = 'i';
-  }
+  bookmarkLabel.classList.add('header-bookmarks-bg');
 });
 
 var shopping = document.querySelector('.buy');
-var basketCount = document.querySelector('.basket-count');
+var basket = document.querySelector('.basket');
+var basketCount = basket.querySelector('.basket-count');
 
 var cartPopup = document.querySelector('.modal-cart-added');
 var continueBtn = cartPopup.querySelector('.continue-shopping');
@@ -19,9 +19,7 @@ var cartPopupClose = cartPopup.querySelector('.modal-close');
 shopping.addEventListener('click', function(evt) {
   evt.preventDefault();
   cartPopup.classList.add('modal-show');
-  for(var i = 0; i++;) {
-    basketCount.textContent = i;
-  }
+  basket.classList.add('basket-bg');
 });
 
 continueBtn.addEventListener('click', function(evt) {

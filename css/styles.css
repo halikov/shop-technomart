@@ -255,6 +255,22 @@ input[type="radio"].visually-hidden {
 .basket:active {
   background-color: #161d29;
 }
+
+.header-bookmarks-bg,
+.basket-bg {
+  background-color: #ee3643;
+}
+
+.header-bookmarks-bg:hover,
+.basket-bg:hover {
+  background-color: #ca2c37;
+}
+
+.header-bookmarks-bg:focus,
+.basket-bg:focus {
+  background-color: #ba2732;
+}
+
 .checkout:hover,
 .checkout:focus {
   background-color: #5fbb2d;
@@ -1936,6 +1952,7 @@ input[type="radio"].visually-hidden {
   display: block;
   animation-name: scaled;
   animation-duration: 0.3s;
+  transition: all 300 linear;
 }
 
 @keyframes shake {
