@@ -1,12 +1,38 @@
 var bookmarked = document.querySelector('.bookmark');
 var bookmarkCount = document.querySelector('.bookmark-count');
 
+bookmarked.addEventListener('click', function(evt) {
+  evt.preventDefault();
+  for(var i = 0; i++;) {
+    bookmarkCount.textContent = 'i';
+  }
+});
+
 var shopping = document.querySelector('.buy');
 var basketCount = document.querySelector('.basket-count');
 
 var cartPopup = document.querySelector('.modal-cart-added');
 var continueBtn = cartPopup.querySelector('.continue-shopping');
 var cartPopupClose = cartPopup.querySelector('.modal-close');
+
+
+shopping.addEventListener('click', function(evt) {
+  evt.preventDefault();
+  cartPopup.classList.add('modal-show');
+  for(var i = 0; i++;) {
+    basketCount.textContent = i;
+  }
+});
+
+continueBtn.addEventListener('click', function(evt) {
+  evt.preventDefault();
+  cartPopup.classList.remove('modal-show');
+});
+
+cartPopupClose.addEventListener('click', function(evt) {
+  evt.preventDefault();
+  cartPopup.classList.remove('modal-show');
+});
 
 var openBtn = document.querySelector('.modal-open');
 
@@ -29,31 +55,6 @@ try {
   isStorageSupport = false;
 }
 
-bookmarked.addEventListener('click', function(evt) {
-  evt.preventDefault();
-  for(var i = 0; i++;) {
-    bookmarkCount.textContent = i;
-  }
-});
-
-shopping.addEventListener('click', function(evt) {
-  evt.preventDefault();
-  for(var i = 0; i++;) {
-    basketCount.textContent = i;
-    console.log('Товаров в корзине' + i);
-  }
-  cartPopup.classList.add('modal-show');
-});
-
-continueBtn.addEventListener('click', function(evt) {
-  evt.preventDefault();
-  cartPopup.classList.remove('modal-show');
-});
-
-cartPopupClose.addEventListener('click', function(evt) {
-  evt.preventDefault();
-  cartPopup.classList.remove('modal-show');
-});
 
 openBtn.addEventListener('click', function(evt) {
   evt.preventDefault(); 
@@ -72,7 +73,7 @@ openBtn.addEventListener('click', function(evt) {
 
 close.addEventListener('click', function(evt) {
   evt.preventDefault();
-  popup.classList.remove('modal-show');
+  popup.classList.remove('modal-show', 'modal-error');
 });
 
 form.addEventListener('submit', function(evt) {
@@ -82,7 +83,7 @@ form.addEventListener('submit', function(evt) {
     popup.classList.add('modal-error');
   } else {
     if(isStorageSupport) {
-      localStorage.setItem('username', usename.value);
+      localStorage.setItem('username', username.value);
     }
   }
 });
