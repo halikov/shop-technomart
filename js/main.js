@@ -1,3 +1,5 @@
+// карточка товара , в закладки модальное окно 
+
 var bookmarkBtn = document.querySelector('.bookmark');
 var bookmarkLabel = document.querySelector('.header-bookmarks');
 var bookmarkCount = bookmarkLabel.querySelector('.bookmarks-count');
@@ -31,6 +33,8 @@ cartPopupClose.addEventListener('click', function(evt) {
   evt.preventDefault();
   cartPopup.classList.remove('modal-show');
 });
+
+// модальное окно карты и формы обратной связи
 
 var openBtn = document.querySelector('.modal-open');
 
@@ -109,4 +113,53 @@ window.addEventListener('keydown', function(evt) {
   }
 })
 
+// slider 
 
+var slider = document.querySelector('.slider');
+var sliderDot1 = slider.querySelector('.slide1');
+var sliderDot2 = slider.querySelector('.slide2');
+var slideItem1 = slider.querySelector('#slide-item-1');
+var slideItem2 = slider.querySelector('#slide-item-2');
+
+sliderDot1.addEventListener('click', function(evt) {
+ // evt.preventDefault();
+  slideItem2.classList.remove('slide-item-hide');
+  slideItem1.classList.add('slide-item-hide');
+});
+
+sliderDot2.addEventListener('click', function(evt) {
+  //evt.preventDefault();
+  slideItem1.classList.remove('slide-item-hide');
+  slideItem2.classList.add('slide-item-hide');
+});
+
+// services slider
+
+var servicesSlider = document.querySelector('.services-slider');
+var slideBtn1 = servicesSlider.querySelector('.input-delivery');
+var slideBtn2 = servicesSlider.querySelector('.input-assurance');
+var slideBtn3 = servicesSlider.querySelector('.input-credit');
+var slideDelivery = servicesSlider.querySelector('.delivery-content');
+var slideAssurance = servicesSlider.querySelector('.assurance-content');
+var slideCredit = servicesSlider.querySelector('.credit-content');
+
+slideBtn1.addEventListener('click', function(evt) {
+  //evt.preventDefault();
+  slideDelivery.classList.remove('services-slide-hide');
+  slideAssurance.classList.add('services-slide-hide');
+  slideCredit.classList.add('services-slide-hide');
+});
+
+slideBtn2.addEventListener('click', function(evt) {
+  //evt.preventDefault();
+  slideAssurance.classList.remove('services-slide-hide');
+  slideDelivery.classList.add('services-slide-hide');
+  slideCredit.classList.add('services-slide-hide');
+});
+
+slideBtn3.addEventListener('click', function(evt) {
+  //evt.preventDefault();
+  slideCredit.classList.remove('services-slide-hide');
+  slideAssurance.classList.add('services-slide-hide');
+  slideDelivery.classList.add('services-slide-hide');
+});
