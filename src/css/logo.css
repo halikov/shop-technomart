@@ -1,0 +1,31 @@
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 220px;
+  min-height: 45px;
+  margin: 0;
+  text-align: center;
+  box-shadow: 0 5px 0 0 var(--primary-color-active);
+  background-color: var(--primary-color);
+}
+
+.logo:hover,
+.logo:focus {
+  background-color: var(--primary-color-hover);
+}
+
+.logo:active {
+  background-color: var(--primary-color-active);
+}
+
+.logo__img {
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 111px;
+  height: 18px;
+  margin: 0;
+}
+

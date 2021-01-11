@@ -1,10 +1,8 @@
-/*
-  карточка товара , в закладки модальное окно
-*/
+/* карточка товара , в закладки модальное окно */
 
-var productList = document.querySelectorAll('.products-list-item');
-var bookmarkLabel = document.querySelector('.header-bookmarks');
-var bookmarkCount = bookmarkLabel.querySelector('.bookmarks-count');
+var productList = document.querySelectorAll('.product');
+var bookmarkLabel = document.querySelector('.header__bookmarks');
+var bookmarkCount = bookmarkLabel.querySelector('.header__bookmarks-count');
 
 for (var i = 0; i < productList.length; i++) {
   var product = productList[i];
@@ -12,14 +10,13 @@ for (var i = 0; i < productList.length; i++) {
 
   bookmarkBtn.addEventListener('click', function (evt) {
     evt.preventDefault();
-    bookmarkLabel.classList.add('header-bookmarks-bg');
+    bookmarkLabel.classList.add('header__bookmarks-bg');
     bookmarkCount.textContent++;
   });
 }
 
-
-var basket = document.querySelector('.basket');
-var basketCount = basket.querySelector('.basket-count');
+var basket = document.querySelector('.header__basket-link');
+var basketCount = basket.querySelector('.header__basket-count');
 
 var cartPopup = document.querySelector('.modal-cart-added');
 var continueBtn = cartPopup.querySelector('.continue-shopping');
@@ -31,8 +28,8 @@ for (var i = 0; i < productList.length; i++) {
 
   shopping.addEventListener('click', function (evt) {
     evt.preventDefault();
+    basket.classList.add('header__basket-link-bg');
     cartPopup.classList.add('modal-show');
-    basket.classList.add('basket-bg');
     basketCount.textContent++;
   });
 }

@@ -1,0 +1,253 @@
+/* populars  */
+
+.popular-products {
+  margin-bottom: 21px;
+}
+
+.heading-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin-bottom: 20px;
+  background-color: #f9f5f0;
+}
+
+.popular__heading {
+  font-family: 'Cuprum', 'Arial', sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: left;
+  color: #32425c;
+}
+
+.popular__heading {
+  margin: 0;
+  padding: 27px 27px;
+}
+
+.popular__link {
+  display: block;
+  margin: 25px 24px;
+  padding: 10px 55px;
+  font-family: 'Cuprum', 'Arial', sans-serif;
+  font-size: 14px;
+  line-height: 17.5px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  border-radius: 3px;
+  background-color: #ee3643;
+  box-sizing: border-box;
+}
+
+.popular__link:hover,
+.popular__link:focus {
+  background-color: #ca2c37;
+}
+
+.popular__link:active {
+  background-color: #ba2732;
+}
+
+.products__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.inner-page .products__item {
+  margin-bottom: 20px;
+}
+
+.product {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product .flag {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  width: 60px;
+  height: 60px;
+  text-indent: -1000px;
+  overflow: hidden;
+  z-index: 20;
+}
+
+.product .flag-new {
+  background: url('../img/new-flag.png') no-repeat 0 0;
+}
+
+.product .actions {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 218px;
+  height: 88px;
+  padding: 40px 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 10;
+}
+
+.actions .buy,
+.actions .bookmark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 129px;
+  margin: 0 auto;
+  margin-bottom: 7px;
+  padding: 7px 0;
+  border: 3px solid #63a63e;
+  border-bottom-color: #367315;
+  background-color: #63a63e;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Cuprum', 'Arial', sans-serif;
+  line-height: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+
+.actions .bookmark {
+  color: #32425c;
+  background-color: #ffffff;
+  border-bottom-color: #63a63e;
+}
+
+.actions .bookmark:hover,
+.actions .bookmark:focus {
+  border-color: #32425c;
+}
+
+.actions .bookmark:active {
+  opacity: 0.3;
+}
+
+.actions .buy:hover,
+.actions .buy:focus {
+  background-color: #5fbb2d;
+}
+
+.actions .buy:active {
+  background-color: #518534;
+  border-color: #518534;
+}
+
+.products__item .actions {
+  display: none;
+}
+
+.products__item:hover .actions {
+  display: block;
+}
+
+.product__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 218px;
+  height: 168px;
+}
+
+.product__image img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.products__item:hover,
+.products__item:focus {
+  box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
+  background-color: #ffffff;
+}
+
+.product__caption {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  width: 218px;
+  min-height: 151px;
+}
+
+.product__title {
+  max-width: 200px;
+  min-height: 40px;
+  margin-top: 10px;
+  margin-bottom: 14px;
+  padding: 0 25px;
+  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+  text-align: center;
+  color: #000000;
+}
+
+.product__title a {
+  color: inherit;
+}
+
+.old-price {
+  display: block;
+  min-height: 20px;
+  margin-bottom: 7px;
+  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: line-through;
+  color: #999999;
+}
+
+.new-price {
+  position: relative;
+  display: block;
+  bottom: 0px;
+  width: auto;
+  margin-bottom: 20px;
+  padding: 11px 30px;
+  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  background-color: #ee3643;
+}
+
+.new-price::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -20px;
+  width: 0;
+  height: 0;
+  border: 20px solid white;
+  border-left-color: #ee3643;
+}

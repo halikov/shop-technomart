@@ -1,0 +1,9 @@
+:root {
+  --primary-color: #ee3643;
+  --primary-color-hover: #ca2c37;
+  --primary-color-active: #ba2732;
+
+  --bg-color: #293449;
+  --bg-color-hover: #212a3a;
+  --bg-color-active: #161d29;
+}

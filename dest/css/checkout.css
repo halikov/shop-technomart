@@ -1,0 +1,13 @@
+.checkout {
+  padding: 13px 22px;
+  margin-right: 0;
+  font-family: 'Cuprum', 'Arial', sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  color: #ffffff;
+  background-color: #5fbb2d;
+}
