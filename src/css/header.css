@@ -43,7 +43,7 @@
 }
 
 .header__bookmarks-count,
-.header__header__basket-link-count {
+.header__basket-link-count {
   margin: 0;
   padding: 0;
 }
@@ -148,7 +148,7 @@
 }
 
 .header__center address {
-  width: 250px;
+  width: 270px;
   margin: 0;
   padding: 0;
   margin-right: 10px;
@@ -159,7 +159,7 @@
 
 .header__center .telephone {
   position: relative;
-  width: 170px;
+  width: 100%;
   padding: 9px 35px;
   padding-left: 64px;
   font-family: 'Cuprum', 'Arial', sans-serif;

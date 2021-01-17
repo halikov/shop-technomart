@@ -1,8 +1,9 @@
-const { src, dest, series, watch } = require('gulp');
+const { src, dest, series, parallel, watch } = require('gulp');
 const cssmin = require('gulp-cssmin');
 const del = require('del');
 const htmlmin = require('gulp-htmlmin');
-const uglify = require('gulp-uglify');
+// const uglify = require('gulp-uglify');
+const minify = require('gulp-minify');
 const browserSync = require('browser-sync').create();
 
 // The `clean` function is not exported so it can be considered a private task.
@@ -24,7 +25,11 @@ function css() {
 
 function js() {
   return src('src/js/*.js')
-    .pipe(uglify())
+    .pipe(minify({
+      ext: {
+        min: '.min.js'
+      }
+    }))
     .pipe(dest('dest/js'));
 }
 
@@ -44,22 +49,14 @@ function serve() {
 
   watch('src/css/**/*.css', series(css)).on('change', browserSync.reload);
   watch('src/**.html', series(html)).on('change', browserSync.reload);
-  watch('src/**.js', series(js)).on('change', browserSync.reload);
+  watch('src/js/*.js', series(js)).on('change', browserSync.reload);
 }
-
-// The `build` function is exported so it is public and can be run with the `gulp` command.
-// It can also be used within the `series()` composition.
-// function build(cb) {
-//   // body omitted
-//
-//   cb();
-// }
 
 exports.images = img;
 exports.css = css;
 exports.server = serve;
-exports.js = js;
+exports.jScript = js;
 
 exports.default = series(clean, css, js, img);
-exports.serve = series(clean, css, js, serve);
-exports.build = series(clean, html, css, js, img, serve);
+exports.serve = series(clean, html, parallel(css, js), img, serve);
+exports.build = series(clean, html, css, js, img);

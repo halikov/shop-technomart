@@ -1,0 +1,109 @@
+.promo__list {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  grid-template-rows: repeat(3, 125px);
+  grid-template-areas:
+    'mt ins tec'
+    'sld sld disc'
+    'sld sld dlvr';
+  gap: 20px;
+}
+
+.promo__item--mt {
+  grid-area: mt;
+  background-image: url('../img/icon-1.svg');
+  background-position: 85% center;
+  background-repeat: no-repeat;
+  background-color: #ffbf47;
+}
+
+.promo__item--ins {
+  grid-area: ins;
+  background-color: #3bbce3;
+  background-image: url('../img/icon-2.svg');
+  background-position: 85% center;
+  background-repeat: no-repeat;
+}
+
+.promo__item--tec {
+  grid-area: tec;
+  background-color: #dc91d8;
+  background-image: url('../img/icon-3.svg');
+  background-position: 85% center;
+  background-repeat: no-repeat;
+}
+
+.promo__item--sld {
+  grid-area: sld;
+}
+
+.promo__item--dlvr {
+  grid-area: dlvr;
+  background-color: #ffc047;
+  background-image: url(../img/icon-5.svg);
+  background-position: 85% center;
+  background-repeat: no-repeat;
+}
+
+.promo__item--disc {
+  grid-area: disc;
+  background-color: #8ed78f;
+  background-image: url(../img/icon-4.svg);
+  background-position: 85% center;
+  background-repeat: no-repeat;
+}
+
+.promo__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.promo__item .flag-new {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  width: 60px;
+  height: 60px;
+  text-indent: -1000px;
+  overflow: hidden;
+  z-index: 20;
+}
+
+.promo__title {
+  margin: 0;
+  padding: 18px 22px 24px;
+  font-family: 'Cuprum', 'Arial', sans-serif;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  text-align: left;
+  color: #ffffff;
+}
+
+.promo__link {
+  display: inline-block;
+  margin-left: 20px;
+  margin-right: auto;
+  padding: 10px 24px;
+  font-family: 'Cuprum', 'Arial', sans-serif;
+  font-size: 14px;
+  line-height: 17.5px;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid transparent;
+  border-radius: 2px;
+}
+
+.promo__link:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.promo__link:active {
+  background-color: rgba(0, 0, 0, 0.3);
+}
